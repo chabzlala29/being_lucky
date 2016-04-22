@@ -32,6 +32,12 @@ describe BeingLucky do
       expect(bl.score).to eq 450
       expect(bl.non_scoring_dice).to eq [2]
     end
+
+    it 'when throw 1 1 1 3 5' do
+      bl = BeingLucky.new([1,1,1,3,5])
+      expect(bl.score).to eq 1050
+      expect(bl.non_scoring_dice).to eq [3]
+    end
   end
 
   describe '#continue' do
